@@ -23,9 +23,7 @@
 }
 
 .row {
-	display: flex;
-	flex-wrap: wrap;
-	margin: calc(var(--gap-y) * -1) calc(var(--gap-x) * -1);
+	@include var.grid-row;
 }
 
 .col {

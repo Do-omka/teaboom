@@ -30,9 +30,12 @@ $container-max-widths: (
 	}
 }
 
-@mixin row($gap-x, $gap-y) {
-	@if $gap {
+@mixin row($gap-x: null, $gap-y: null) {
+	@if $gap-x {
 		--gap-x: #{$gap-x};
+	}
+
+	@if $gap-y {
 		--gap-y: #{$gap-y};
 	}
 
