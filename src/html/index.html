@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Ананасовый улун — Чайный Бум</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="css/style.css"
+		/>
+	</head>
+
+	<body>
+		<main>
+			<div class="container">
+				<article class="product">
+					<div class="row">
+						<div class="col-12 col-lg-6">
+							<div class="product__showcase">
+								<div
+									class="product__discount"
+									id="discount"
+								>
+									-7%
+								</div>
+								<img
+									class="product__img img"
+									src="img/ananasovij-ulun.800x800.webp"
+									alt="Ананасовый улун"
+								/>
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-6">
+							<div class="product__content">
+								<h1 class="product__title h1">Ананасовый улун</h1>
+
+								<div class="product__info">
+									<div class="product__article">
+										Артикул:
+										<span
+											class="product__info-value"
+											id="article"
+											>01306</span
+										>
+									</div>
+
+									<div class="product__amount">
+										Наличие:
+										<span
+											class="product__info-value"
+											id="amount"
+											>много</span
+										>
+									</div>
+								</div>
+
+								<div class="packaging">
+									<span class="packaging__label">Фасовка</span>
+									<ul class="packaging__list row">
+										<!-- TODO: вывод в цикле шаблонизатора -->
+										<li class="packaging__item col-6">
+											<label class="packaging__chip">
+												<input
+													class="packaging__input"
+													type="radio"
+													name="pack"
+													data-weight="100"
+													data-article="01306"
+													data-price="326.40"
+													data-old-price="349.20"
+													data-discount="7"
+													data-amount="много"
+													checked
+												/>
+												100 г
+												<span class="packaging__discount">-7%</span>
+											</label>
+										</li>
+
+										<li class="packaging__item col-6">
+											<label class="packaging__chip">
+												<input
+													class="packaging__input"
+													type="radio"
+													name="pack"
+													data-weight="500"
+													data-article="01307"
+													data-price="1432.00"
+													data-old-price="1646.00"
+													data-discount="13"
+													data-amount="мало"
+												/>
+												500 г
+												<span class="packaging__discount">-13%</span>
+											</label>
+										</li>
+
+										<li class="packaging__item col-6">
+											<label class="packaging__chip">
+												<input
+													class="packaging__input"
+													type="radio"
+													name="pack"
+													data-weight="1000"
+													data-article="01308"
+													data-price="2064.00"
+													data-old-price="2592.00"
+													data-discount="20"
+													data-amount="много"
+												/>
+												1000 г
+												<span class="packaging__discount">-20%</span>
+											</label>
+										</li>
+
+										<li class="packaging__item col-6">
+											<label class="packaging__chip">
+												<input
+													class="packaging__input"
+													type="radio"
+													name="pack"
+													data-weight="5000"
+													data-article="01309"
+													data-price="6320.00"
+													data-old-price="8710.00"
+													data-discount="27"
+													data-amount="много"
+												/>
+												5000 г
+												<span class="packaging__discount">-27%</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+
+								<div class="price">
+									<span
+										class="price__current"
+										id="price"
+										>326,40 ₽</span
+									>
+									<span
+										class="price__old"
+										id="old-price"
+										>349,20 ₽</span
+									>
+								</div>
+
+								<button
+									class="btn"
+									type="button"
+								>
+									<svg
+										class="btn__icon"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										aria-hidden="true"
+									>
+										<circle
+											cx="9"
+											cy="21"
+											r="1"
+										></circle>
+										<circle
+											cx="20"
+											cy="21"
+											r="1"
+										></circle>
+										<path
+											d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+										></path>
+									</svg>
+									В корзину
+								</button>
+
+								<div class="product__description">
+									<p class="product__description-title">Описание</p>
+									<p>
+										Состав: китайский бирюзовый чай, цукаты, натуральные
+										ароматические масла. Светлый Фуцзяньский улун с ярким
+										ароматом спелого ананаса.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</main>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

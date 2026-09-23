@@ -1,0 +1,20 @@
+@use 'sass:color';
+@forward 'sass:color';
+
+$card-bg: #fff;
+$page-bg: #f6f7f6;
+$media-bg: #fbfbfa;
+
+$text: #202020;
+$text-info: #4a4a4a;
+$text-alt: #fff;
+$border: #e5e5e5;
+
+$primary: #77a60d;
+$selection: color.change($primary, $alpha: 0.25);
+$primary-hover: color.adjust($primary, $lightness: -8%);
+$primary-active: color.adjust($primary, $lightness: -15%);
+$primary-shadow: color.change($primary, $alpha: 0.35);
+
+$important: rgb(255 136 0);
+$outdated: rgb(150 150 150);

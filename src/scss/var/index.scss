@@ -1,0 +1,10 @@
+@forward 'var/grid' as grid-*;
+@forward 'var/colors' as color-*;
+@forward 'var/spacers' as space-*;
+
+// Основной брикпоинт переключения с мобильной версии
+$bp: md;
+
+$transition: all 0.25s;
+$element-radius: 6px;
+$card-radius: 12px;

@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/js/*"]
+		}
+	},
+	"include": ["./src/js/"]
+}

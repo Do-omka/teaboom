@@ -1,0 +1,61 @@
+@use 'var';
+
+:root {
+	--gap-x: #{var.space-get(3)};
+	--gap-y: #{var.space-get(3)};
+	--container-indent: #{var.space-get(5)};
+	--container-max-width: none;
+
+	@each $breakpoint, $container-max-width in var.$grid-container-max-widths {
+		@include var.grid-min($breakpoint) {
+			--container-max-width: #{$container-max-width};
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: var(--container-max-width);
+	padding-left: var(--container-indent);
+	padding-right: var(--container-indent);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(var(--gap-y) * -1) calc(var(--gap-x) * -1);
+}
+
+.col {
+	@include var.grid-col;
+}
+
+.col-auto {
+	@include var.grid-col(auto);
+}
+
+@for $i from 1 through var.$grid-columns {
+	.col-#{$i} {
+		@include var.grid-col($i);
+	}
+}
+
+@each $name, $value in var.$grid-breakpoints {
+	@media (min-width: $value) {
+		.col-#{$name} {
+			@include var.grid-col;
+		}
+
+		.col-#{$name}-auto {
+			@include var.grid-col(auto);
+		}
+
+		@for $i from 1 through var.$grid-columns {
+			.col-#{$name}-#{$i} {
+				@include var.grid-col($i);
+			}
+		}
+	}
+}

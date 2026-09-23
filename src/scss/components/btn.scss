@@ -1,0 +1,32 @@
+@use 'var';
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var.space-get(3);
+	width: 100%;
+	padding: var.space-get(4) var.space-get(5);
+	font-size: 16px;
+	font-weight: 700;
+	color: var.$color-text-alt;
+	background: var.$color-primary;
+	border-radius: var.$element-radius;
+	transition: var.$transition;
+
+	&:hover {
+		background: var.$color-primary-hover;
+		box-shadow: 0 6px 18px var.$color-primary-shadow;
+	}
+
+	&:active {
+		background: var.$color-primary-active;
+		transform: translateY(1px);
+	}
+}
+
+.btn__icon {
+	width: 20px;
+	height: 20px;
+	flex: 0 0 auto;
+}

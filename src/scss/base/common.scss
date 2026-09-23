@@ -1,0 +1,35 @@
+@use 'var';
+
+::selection {
+	background-color: var.$color-selection;
+}
+
+body {
+	font:
+		400 16px / 1.2 Roboto,
+		arial,
+		sans-serif;
+	color: var.$color-text;
+	background: var.$color-page-bg;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: var.space-get(7) 0;
+}
+
+.img {
+	border-radius: var.$element-radius;
+	background: var.$color-media-bg;
+}
+
+.h1 {
+	font-size: 30px;
+	font-weight: 700;
+
+	@include var.grid-min(var.$bp) {
+		.h1 {
+			font-size: 38px;
+		}
+	}
+}

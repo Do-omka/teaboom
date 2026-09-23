@@ -1,0 +1,61 @@
+@use 'var';
+
+@mixin spacers($breakpoint) {
+	@each $key, $value in var.$space-values {
+		.m-#{$breakpoint}#{$key} {
+			margin: $value !important;
+		}
+		.mt-#{$breakpoint}#{$key} {
+			margin-top: $value !important;
+		}
+		.mb-#{$breakpoint}#{$key} {
+			margin-bottom: $value !important;
+		}
+		.ml-#{$breakpoint}#{$key} {
+			margin-left: $value !important;
+		}
+		.mr-#{$breakpoint}#{$key} {
+			margin-right: $value !important;
+		}
+		.mx-#{$breakpoint}#{$key} {
+			margin-left: $value !important;
+			margin-right: $value !important;
+		}
+		.my-#{$breakpoint}#{$key} {
+			margin-top: $value !important;
+			margin-bottom: $value !important;
+		}
+
+		.p-#{$breakpoint}#{$key} {
+			padding: $value !important;
+		}
+		.pt-#{$breakpoint}#{$key} {
+			padding-top: $value !important;
+		}
+		.pb-#{$breakpoint}#{$key} {
+			padding-bottom: $value !important;
+		}
+		.pl-#{$breakpoint}#{$key} {
+			padding-left: $value !important;
+		}
+		.pr-#{$breakpoint}#{$key} {
+			padding-right: $value !important;
+		}
+		.px-#{$breakpoint}#{$key} {
+			padding-left: $value !important;
+			padding-right: $value !important;
+		}
+		.py-#{$breakpoint}#{$key} {
+			padding-top: $value !important;
+			padding-bottom: $value !important;
+		}
+	}
+}
+
+@include spacers('');
+
+@each $name, $value in var.$grid-breakpoints {
+	@media (min-width: $value) {
+		@include spacers('#{$name}-');
+	}
+}
